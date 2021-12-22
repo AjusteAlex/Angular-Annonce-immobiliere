@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Liste des mots clés</h1>
+    <div class="elements">
+        <table class="element" *ngFor="let keyword of keywords">
+            <th>Nom :</th> 
+            <td>{{ keyword.name}}</td> 
+            <div class="action">
+                <button mat-flat-button color="update" routerLinkActive="router-link-active" [routerLink]="['/keyword/edit/', keyword.id]">Modifier</button> 
+                <button mat-flat-button color="warn" (click)="delete(keyword.id)">Supprimer</button>
+            </div>
+        </table>
+    </div>
+    
+    <button class="create" mat-flat-button color="primary" [routerLink]="['/keyword/add']" routerLinkActive="router-link-active" >Créer un mot clé</button>
+</div>

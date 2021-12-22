@@ -1,0 +1,18 @@
+
+<div class="header">
+    <div class="container">
+        <div class="menu">
+            <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+            <button mat-button [routerLink]="['/login']" routerLinkActive="router-link-active" >Connexion</button>
+        </div>
+        <mat-menu class="sous-menu"#menu="matMenu">
+            <button mat-menu-item [routerLink]="['/']" routerLinkActive="router-link-active" >Annonces immobilière</button>
+            <button mat-menu-item [routerLink]="['advertisement/add']" routerLinkActive="router-link-active" >Ajouter une annonce</button>
+            <button mat-menu-item [routerLink]="['/advantages']" routerLinkActive="router-link-active" >Listes Avantages</button>
+            <button mat-menu-item [routerLink]="['/keywords']" routerLinkActive="router-link-active" >Listes mot clé</button>
+            <button mat-menu-item [routerLink]="['/properties']" routerLinkActive="router-link-active" >Liste type de bien</button>
+            <button mat-menu-item [routerLink]="['/users']" routerLinkActive="router-link-active" >Liste des utilisateurs</button>
+            <!-- <div *ngIf="users.roles.includes('admin')">Business</div> -->
+        </mat-menu>
+    </div>
+</div>

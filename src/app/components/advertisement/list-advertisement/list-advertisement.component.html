@@ -1,0 +1,25 @@
+
+<div class='container'>
+    <h1>Annonces</h1>
+    <div class="annonces">
+        <div class="annonce" *ngFor="let advertisement of advertisements">
+            <div class="content">
+                <img src="{{advertisement.picture}}" alt="ici : une image qui ne marche pas"/>
+                <ul>
+                    <li>Titre : {{ advertisement.title}}</li>
+                    <li>Prix : {{advertisement.price }}</li>
+                    <li>Secteur : {{ advertisement.sector}}</li>
+                    <li>Nombre de pièces : {{advertisement.nbpieces }}</li>
+                    <li>Description : {{ advertisement.description}}</li>
+                    <li>Types de bien : {{advertisement.Property.name }}</li>
+                    <li *ngFor="let Keyword of advertisement.Keywords">Mots clés : {{ Keyword.name}}</li>
+                    <li *ngFor="let Advantages of advertisement.Advantages">Avantage : {{ Advantages.name}}</li>
+                    <li>Agents atitré : {{ advertisement.User.name}}</li>
+                </ul>
+            </div>
+            <div class="detail">
+                <button mat-flat-button color="primary" [routerLink]="['/advertisement/', advertisement.id]" routerLinkActive="router-link-active" >Voir l'annonce</button>
+            </div>
+        </div>
+    </div>
+</div>

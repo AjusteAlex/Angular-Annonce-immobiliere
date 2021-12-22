@@ -1,0 +1,18 @@
+<div class="container">
+    <form [formGroup]="login" (submit)="submit()">
+            <h1>Ce connecter</h1>
+            <div>
+                <mat-label>Email:</mat-label>
+                <input name="email" formControlName="email">
+            </div>
+            <div class="form-field">
+                <label>Password:</label>
+                <input name="password"matInput  formControlName="password" 
+                       type="password">
+            </div>
+        
+        <div class="form-buttons">
+            <button class="button button-primary">Login</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+    <h2>Ajout d'un utilisateur</h2>
+  <form [formGroup]="userForm" (ngSubmit)="submit()">
+    <mat-form-field>
+      <mat-label>Nom</mat-label> 
+      <input matInput formControlName="name" id="name" type="text" required>
+      <mat-error>Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>age</mat-label> 
+        <input matInput formControlName="age" id="age" type="number" required>
+        <mat-error>Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>email</mat-label> 
+        <input matInput formControlName="email" id="email" type="text" required>
+        <mat-error>Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>password</mat-label> 
+        <input matInput formControlName="password" id="password" type="text" required>
+        <mat-error>Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>tel</mat-label> 
+        <input matInput formControlName="tel" id="tel" type="text" required>
+        <mat-error>Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>role</mat-label> 
+        <input matInput formControlName="Roles" id="Roles" type="number" required>
+        <mat-error>Required</mat-error>
+      </mat-form-field>
+    <button mat-flat-button color="primary" type="submit" [disabled]="!userForm.valid">Submit</button>
+  </form>
+  </div>

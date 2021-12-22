@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Liste des biens</h1>
+    <div class="elements">
+        <table class="element" *ngFor="let property of properties">
+            <th>Nom :</th> 
+            <td>{{ property.name}}</td> 
+            <div class="action">
+                <button mat-flat-button color="update" routerLinkActive="router-link-active" [routerLink]="['/property/edit/', property.id]">Modifier</button> 
+                <button mat-flat-button color="warn" (click)="delete(property.id)">Supprimer</button>
+            </div>
+        </table>
+    </div>
+    
+    <button class="create" mat-flat-button color="primary" [routerLink]="['/property/add']" routerLinkActive="router-link-active" >Créer un bien</button>
+</div>

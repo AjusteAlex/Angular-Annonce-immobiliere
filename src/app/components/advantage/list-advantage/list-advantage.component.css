@@ -1,0 +1,33 @@
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.container h1 {
+    text-align: center;
+}
+.elements{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.element{
+    flex: 2 45%;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(170, 170, 170, 0.534);
+}
+.action{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+.action button{
+    margin: 0 10px;
+}
+.mat-update{
+    background-color: rgb(0, 102, 0);
+    color: #fff;
+}
+.create{
+    margin-left: 20px;
+}

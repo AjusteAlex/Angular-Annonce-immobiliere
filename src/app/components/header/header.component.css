@@ -1,0 +1,20 @@
+.header{
+    width: 100%;
+    background-color: rgba(226, 226, 226, 0.404);
+    margin-bottom: 20px;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.menu{
+    display: flex;
+    padding: 20px 0;
+}
+.menu-burger{
+    width: auto;
+}
+.menu button{
+    min-width: 100px;
+}
+

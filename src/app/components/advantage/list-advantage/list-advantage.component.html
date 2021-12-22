@@ -1,0 +1,16 @@
+
+<div class="container">
+    <h1>Liste des avantages</h1>
+    <div class="elements">
+        <table class="element" *ngFor="let advantage of advantages">
+            <th>Nom :</th> 
+            <td>{{ advantage.name}}</td> 
+            <div class="action">
+                <button mat-flat-button color="update" routerLinkActive="router-link-active" [routerLink]="['/advantage/edit/', advantage.id]">Modifier</button> 
+                <button mat-flat-button color="warn" (click)="delete(advantage.id)">Supprimer</button>
+            </div>
+        </table>
+    </div>
+    
+    <button class="create" mat-flat-button color="primary" [routerLink]="['/advantage/add']" routerLinkActive="router-link-active" >Créer un avantage</button>
+</div>

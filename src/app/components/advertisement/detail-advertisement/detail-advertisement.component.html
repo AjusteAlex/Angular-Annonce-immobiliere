@@ -1,0 +1,18 @@
+
+<div class='container'>
+    <h1>{{ advertisement?.title}}</h1>
+    <div class="annonces">
+        <div class="content">
+            <ul>
+                <li>Prix : {{advertisement?.price }}</li>
+                <li>Secteur : {{ advertisement?.sector}}</li>
+                <li>Nombre de pièces : {{advertisement?.nbpieces }}</li>
+                <li>Description : {{ advertisement?.description}}</li>
+                <!-- <li>Types de bien : {{advertisement.Property.name }}</li>
+                <li *ngFor="let Keyword of advertisement.Keywords">Mots clés : {{ Keyword.name}}</li>
+                <li *ngFor="let Advantages of advertisement.Advantages">Avantage : {{ Advantages.name}}</li>
+                <li>Agents atitré : {{ advertisement.User.name}}</li> -->
+            </ul>
+        </div>
+    </div>
+</div>

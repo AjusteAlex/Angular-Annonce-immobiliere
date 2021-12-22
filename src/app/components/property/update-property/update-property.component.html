@@ -1,0 +1,16 @@
+
+  <div class="container">
+    <h2>Editer un bien</h2>
+    <form [formGroup]="propertiesForm" (ngSubmit)="submit()">
+        <form class="form" [formGroup]="propertiesForm" (ngSubmit)="submit()">
+        <mat-form-field>
+            <mat-label>Mot clé</mat-label> 
+            <input matInput formControlName="name" id="name" type="text" required>
+            <mat-error>Required</mat-error>
+        </mat-form-field>
+        </form>
+
+    
+      <button type="submit" [disabled]="!propertiesForm.valid">Submit</button>
+    </form>
+  </div>

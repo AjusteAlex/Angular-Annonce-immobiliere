@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Liste des utilisateurs</h1>
+    <div *ngFor="let user of users">
+        <div class="content">
+            <ul>
+                <li>Nom : {{ user.name}}</li>
+                <li>Age : {{ user.age}}</li>
+                <li> email : {{ user.email}}</li>
+                <li>tel : {{ user.tel}}</li>
+            </ul>
+        </div>
+        <br>
+    </div>
+    <button mat-menu-item [routerLink]="['/user/add']" routerLinkActive="router-link-active" >Créer un utilisateur</button>
+</div>
+

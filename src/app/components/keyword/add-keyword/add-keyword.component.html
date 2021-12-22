@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Ajout d'un mot clé</h2>
+  <form [formGroup]="keywordForm" (ngSubmit)="submit()">
+    <mat-form-field>
+      <mat-label>Nom</mat-label> 
+      <input matInput formControlName="name" id="name" type="text" required>
+      <mat-error>Required</mat-error>
+    </mat-form-field>
+    
+
+    <button mat-flat-button color="primary" type="submit" [disabled]="!keywordForm.valid">Submit</button>
+  </form>
+</div>
